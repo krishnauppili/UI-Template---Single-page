@@ -1,0 +1,1689 @@
+<html>
+
+<head>
+    <title>Test UI</title>
+    <link href="https://fonts.googleapis.com/css?family=Gothic+A1" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+    <style type="text/css">
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        position: relative;
+    }
+
+    .list {
+        position: absolute;
+        top: 0px;
+        left: 250px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10;
+        width: 550px;
+        font-weight: 10;
+        /*background-color: #111;*/
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover {
+        border-top: 1px solid #01A1DD;
+    }
+
+    .textContent {
+        position: absolute;
+        top: 235px;
+        left: 380px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 32.5;
+        color: white;
+    }
+
+    .textContent2 {
+        position: absolute;
+        top: 285px;
+        left: 545px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15.5;
+        color: white;
+    }
+
+    .textContent3 {
+        position: absolute;
+        top: 350px;
+        left: 505px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20;
+        font-weight: thin;
+        color: white;
+    }
+
+    .time {
+        position: absolute;
+        top: 332px;
+        left: 670px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 40;
+        font-weight: thin;
+        color: white;
+    }
+
+    .buttonClass {
+        position: absolute;
+        top: 415px;
+        left: 566px;
+        background-color: #01A1DD;
+        border: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10;
+        font-weight: thin;
+        color: white;
+        height: 34px;
+        width: 146px;
+        opacity: 0.7;
+    }
+    /*.dot {
+	    height: 7px;
+	    width: 7px;
+	    background-color: #bbb;
+	    border-radius: 50%;
+	    display: inline-block;
+	    position: absolute;
+	    top: 530px;
+	    left: 626px;
+       }*/
+
+       .dot {
+        cursor: pointer;
+        position: relative;
+        height: 7px;
+        width: 7px;
+        margin: 0 0.5px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        top: -96px;
+        left: 0px;
+    }
+
+    .active,
+    .dot:hover {
+        background-color: #717171;
+    }
+
+    .dot2 {
+        height: 7px;
+        width: 7px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        position: absolute;
+        top: 530px;
+        left: 637px;
+    }
+
+    .dot3 {
+        height: 7px;
+        width: 7px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        position: absolute;
+        top: 530px;
+        left: 648px;
+    }
+
+    .whiteCard {
+        position: relative;
+        background-color: white;
+        height: 290px;
+        width: 290px;
+    }
+
+    .blueCard {
+        position: absolute;
+        background-color: #01A1DD;
+        height: 305px;
+        width: 767px;
+        top: 600px;
+        left: 513px;
+    }
+
+    .triangle {
+        /* background-color: white; */
+        top: 725px;
+        left: 496px;
+        height: 57px;
+        width: 35px;
+        position: absolute;
+        filter: brightness(0) invert(1);
+    }
+
+    .mainText {
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        top: 659px;
+        left: 247px;
+        font-size: 15px;
+    }
+
+    .subText1 {
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        /* font-weight: bold; */
+        top: 694px;
+        left: 247px;
+        font-size: 11px;
+        color: #bbb;
+        font-weight: lighter;
+        width: 256px;
+        line-height: 1.4;
+        word-spacing: 2px;
+    }
+
+    .subText2 {
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        /* font-weight: bold; */
+        top: 752px;
+        left: 247px;
+        font-size: 11px;
+        color: #bbb;
+        font-weight: lighter;
+        width: 256px;
+        line-height: 1.4;
+        word-spacing: 2px;
+    }
+
+    .recentWorkRectangle {
+        position: absolute;
+        top: 860px;
+        left: 460px;
+        font-size: 11px;
+        font-weight: lighter;
+        width: 38px;
+        height: 22px;
+        border-style: groove;
+        border-color: #ace4f9;
+        border-width: 1.5;
+    }
+
+    #rightArrow {
+        top: 864px;
+        left: 483px;
+        height: 15px;
+        width: 17px;
+        position: absolute;
+        color: #01A1DD;
+    }
+
+    #leftArrow {
+        top: 865px;
+        left: 464px;
+        height: 15px;
+        width: 15px;
+        position: absolute;
+        color: #bbb;
+        transform: rotate(180deg);
+        font-weight: thin;
+    }
+
+    .welcomeMain {
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        top: 659px;
+        left: 607px;
+        font-size: 15px;
+        color: white;
+    }
+
+    .maleImage {
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        top: 717px;
+        left: 607px;
+        font-size: 15px;
+        color: white;
+        height: 58px;
+        display: inline-block;
+        background-color: white;
+        border-radius: 60%;
+        border: 2px solid;
+    }
+
+    .welcomeSubText {
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: lighter;
+        top: 718px;
+        left: 693px;
+        font-size: 9px;
+        color: #f3f2f2;
+        font-weight: lighter;
+        width: 358px;
+        line-height: 1.4;
+        word-spacing: 2px;
+    }
+
+    .readMoreButton {
+        position: absolute;
+        top: 830px;
+        left: 940px;
+        background-color: #01A1DD;
+        border: 1.5px solid white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10;
+        color: white;
+        height: 34px;
+        width: 94px;
+        opacity: 0.7;
+        font-weight: lighter;
+    }
+
+    .serviceContainer {
+        position: relative;
+        height: 431px;
+        background-color: white;
+    }
+
+    .serviceMainText {
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 22px;
+        top: 64px;
+        left: 593px;
+    }
+
+    .blueLine {
+        position: absolute;
+        top: 107px;
+        left: 605px;
+        background-color: #01A1DD;
+        width: 72px;
+        height: 1px;
+    }
+
+    .keyFeaturesText {
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #101010;
+        font-size: 11.4px;
+        font-weight: lighter;
+        top: 126px;
+        left: 572px;
+        opacity: 0.4;
+        letter-spacing: -0.2;
+    }
+
+    .home {
+        position: absolute;
+        top: 202px;
+        left: 328px;
+        height: 25px;
+        width: 25px;
+        opacity: 0.4;
+    }
+
+    .supportText {
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        top: 264px;
+        left: 310px;
+        opacity: 0.7;
+    }
+
+    .supportSubText {
+        position: absolute;
+        top: 294px;
+        left: 254px;
+        width: 175px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11.5px;
+        opacity: 0.42;
+        text-align: center;
+        line-height: 1.35;
+    }
+
+    .wellDocumentedImage {
+        position: absolute;
+        top: 176px;
+        left: 498px;
+    }
+
+    .wellDocumentedText {
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        top: 264px;
+        left: 476px;
+        opacity: 0.7;
+    }
+
+    .wellDocumentedSubText {
+        position: absolute;
+        top: 293px;
+        left: 454px;
+        width: 176px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11.5px;
+        opacity: 0.42;
+        text-align: center;
+        line-height: 1.35;
+    }
+
+    .clock {
+        position: absolute;
+        top: 202px;
+        left: 728px;
+        opacity: 1;
+    }
+
+    .designeText {
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        top: 262px;
+        left: 694px;
+        opacity: 0.7;
+    }
+
+    .designeSubText {
+        position: absolute;
+        top: 293px;
+        left: 655px;
+        width: 176px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11.5px;
+        opacity: 0.42;
+        text-align: center;
+        line-height: 1.35;
+    }
+
+    .heart {
+        position: absolute;
+        top: 202px;
+        left: 928px;
+        height: 25px;
+        width: 25px;
+        opacity: 0.4;
+    }
+
+    .webSecurityText {
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        top: 262px;
+        left: 897px;
+        opacity: 0.7;
+    }
+
+    .webSecuritySubText {
+        position: absolute;
+        top: 292px;
+        left: 854px;
+        width: 176px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11.5px;
+        opacity: 0.42;
+        text-align: center;
+        line-height: 1.35;
+    }
+
+    .imagesContainer {
+       width: 60%;
+       margin: 40px auto;
+   }
+
+
+
+   .featuredWorksContainer {
+    position: relative;
+    background-color: #F8F8F8;
+    width: 1280px;
+    height: 702px;
+}
+
+.featuresMainText {
+   /* position: absolute; */
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 22px;
+   /* top: 64px; */
+   /* left: 522px; */
+   text-align: center;
+   padding: 50px 0 16px 0;
+}
+
+.featureBlueLine {
+   /* position: absolute; */
+   /* top: 108px; */
+   /* left: 605px; */
+   background-color: #01A1DD;
+   width: 72px;
+   height: 1px;
+   opacity: 0.5;
+   margin: auto;
+   margin-bottom: 13px;
+}
+
+.featureText {
+   /* position: absolute; */
+   top: 126px;
+   left: 328px;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 11.5px;
+   opacity: 0.42;
+   line-height: 1.35;
+   text-align: center;
+}
+
+.imageClass {
+    width: 30.33%;
+    float: left;
+    position: relative;
+    padding: 10px;
+}
+
+.sun {
+   /* position: relative; */
+   /* top: 200px; */
+   /* left: 246px; */
+   width: 254px;
+}
+
+.sun img {
+   display: block;
+   position: absolute;
+   width: 254px;
+}
+
+.mountain,
+.mountain img {
+    position: relative;
+    width: 254px;
+    top: 99px;
+    left: 257px;
+}
+
+.cave,
+.cave img {
+    position: absolute;
+    width: 254px;
+    top: 99px;
+    left: 390px;
+}
+
+.chair,
+.chair img {
+    position: absolute;
+    top: 204px;
+    left: 123px;
+    width: 254px;
+}
+
+.tree,
+.tree img {
+    position: absolute;
+    top: 204px;
+    left: 257px;
+    width: 254px;
+}
+
+.cave1,
+.cave1 img {
+    position: absolute;
+    top: 204px;
+    left: 390px;
+    width: 254px;
+}
+
+    .blackStrip {
+        background-color: #000000fc;
+        height: 80px;
+        width: 233px;
+        opacity: 0.6;
+    }
+
+    .wallStreetText {
+        /*position: absolute;
+	    top: 326px;
+	    left: 798px;*/
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13.5px;
+        font-weight: 100;
+        opacity: 0.85;
+    }
+
+    .wallStreetSubText {
+        /*position: absolute;
+	    top: 349px;
+	    left: 798px;*/
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10.1px;
+        color: white;
+        opacity: 0.75;
+        width: 168px;
+        line-height: 1.4;
+    }
+
+    .whatPeopleSayContainer {
+        position: relative;
+        background-color: black;
+        height: 425px;
+    }
+
+    .blueMountain {
+        position: absolute;
+        width: 1280px;
+    }
+
+    .whatPeopleSayMainText {
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 23px;
+        top: 64px;
+        left: 535px;
+        color: white;
+    }
+
+    .whiteLine {
+        position: absolute;
+        top: 107px;
+        left: 605px;
+        background-color: white;
+        width: 72px;
+        height: 1px;
+        opacity: 0.6;
+    }
+
+    .maleImage1 {
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        top: 130px;
+        left: 608px;
+        font-size: 15px;
+        color: white;
+        height: 57px;
+        display: inline-block;
+        background-color: white;
+        border-radius: 60%;
+        border: 2px solid;
+    }
+
+    .kattyFlower {
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        top: 216px;
+        left: 600px;
+        font-size: 11px;
+        color: white;
+        opacity: 0.9;
+    }
+
+    .whatPeopleSaySubText {
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        top: 244px;
+        left: 368px;
+        font-size: 11px;
+        text-align: center;
+        width: 518px;
+        line-height: 2;
+        opacity: 0.8;
+    }
+
+    #rightQuote {
+        top: 339px;
+        left: 900px;
+        position: absolute;
+        color: white;
+        font-size: 26px;
+        opacity: 0.8;
+    }
+
+    #leftQuote {
+        position: absolute;
+        top: 206px;
+        left: 341px;
+        color: white;
+        font-size: 26px;
+        opacity: 0.8;
+        transform: rotate(180deg);
+    }
+
+    .peopleRectangle {
+        position: absolute;
+        top: 371px;
+        left: 620px;
+        font-size: 11px;
+        font-weight: lighter;
+        width: 38px;
+        height: 22px;
+        border: 1.2px solid white;
+    }
+
+    #peopleRightArrow {
+        top: 375px;
+        left: 642px;
+        height: 15px;
+        width: 17px;
+        position: absolute;
+        color: white;
+    }
+
+    #peopleLeftArrow {
+        top: 376px;
+        left: 623px;
+        height: 15px;
+        width: 15px;
+        position: absolute;
+        color: #fff;
+        transform: rotate(180deg);
+        font-weight: thin;
+    }
+
+    .priceContainer {
+        position: relative;
+        height: 400px;
+        background-color: white;
+    }
+
+    .priceChildContainer {
+        position: absolute;
+        background-color: white;
+        top: 408px;
+        height: 294px;
+    }
+
+    .main {
+        height: 294px;
+        width: 1280px;
+    }
+
+    .priceMainText {
+        position: relative;
+        top: 64px;
+        left: 608px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: black;
+        font-size: 22px;
+    }
+
+    .priceBlueLine {
+        position: absolute;
+        top: 108px;
+        left: 605px;
+        background-color: #01A1DD;
+        width: 72px;
+        height: 1px;
+        opacity: 0.5;
+    }
+
+    .priceDescription {
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #101010;
+        font-size: 11.4px;
+        font-weight: lighter;
+        top: 126px;
+        left: 572px;
+        opacity: 0.4;
+        letter-spacing: -0.2;
+    }
+
+    .table1 {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        width: 253px;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-family: arial;
+        position: absolute;
+        top: 186px;
+        left: 246px;
+        background-color: white;
+        height: 444px;
+    }
+
+    .silver {
+        position: absolute;
+        text-align: center;
+        top: 15px;
+        left: 100px;
+        font-size: 15px;
+        height: 200px;
+    }
+
+    .amount {
+        position: relative;
+        height: 44px;
+        background-color: #F8F8F8;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #a5a3a3;
+        font-size: 44.4px;
+        font-weight: 100;
+    }
+
+    .noBonusPoints {
+        height: 20px;
+        border-bottom: 1px solid #F8F8F8;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #a5a3a3;
+        font-size: 11px;
+    }
+
+    .signUp {
+        height: 25px;
+        border-bottom: 1px solid #F8F8F8;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #a5a3a3;
+        font-size: 11px;
+        background-color: #F8F8F8;
+    }
+
+    .table2 {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        width: 253px;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-family: arial;
+        position: absolute;
+        top: 186px;
+        left: 513px;
+        background-color: white;
+        height: 444px;
+    }
+
+    .table3 {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        width: 253px;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-family: arial;
+        position: absolute;
+        top: 186px;
+        left: 779px;
+        background-color: white;
+        height: 444px;
+    }
+
+    .contactsContainer {
+        position: relative;
+        background-color: white;
+        height: 555px;
+        top: 302px;
+    }
+
+    .contactsMainText {
+        position: absolute;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        top: 79px;
+        left: 550px;
+        font-size: 22.6px;
+    }
+
+    .contactsBlueLine {
+        position: absolute;
+        top: 121px;
+        left: 605px;
+        background-color: #01A1DD;
+        width: 72px;
+        height: 1px;
+        opacity: 0.5;
+    }
+
+    .contactsDescription {
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #101010;
+        font-size: 11.4px;
+        font-weight: lighter;
+        top: 139px;
+        left: 572px;
+        opacity: 0.44;
+        letter-spacing: -0.2;
+    }
+
+    .input {
+        position: relative;
+        color: #afacac;
+        width: 480px;
+        top: 205px;
+        left: 247px;
+        height: 34px;
+        border: 1px solid #ecebeb;
+        margin: 3px;
+        padding: 8px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        line-height: 3px;
+    }
+
+    ::placeholder {
+        color: #afacac;
+        opacity: 1;
+        /* Firefox */
+    }
+
+    .textArea {
+        position: relative;
+        color: #afacac;
+        width: 480px;
+        top: 205px;
+        left: 247px;
+        height: 111px;
+        border: 1px solid #ecebeb;
+        margin: 3px;
+        padding: 8px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10px;
+    }
+
+    .contactSendButton {
+        position: absolute;
+        top: 448px;
+        left: 250px;
+        background-color: #0398d0;
+        border: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        font-weight: thin;
+        color: white;
+        height: 34px;
+        width: 146px;
+        opacity: 1;
+    }
+
+    .contactUsText {
+        position: absolute;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        top: 228px;
+        left: 780px;
+        font-size: 16px;
+    }
+
+    .contactUsBlueLine {
+        position: absolute;
+        top: 258px;
+        left: 780px;
+        background-color: #01A1DD;
+        width: 255px;
+        height: 1px;
+        opacity: 0.5;
+    }
+
+    #editIcon {
+        position: absolute;
+        top: 272px;
+        left: 757px;
+        width: 255px;
+        color: #bbb;
+        font-size: 10px;
+    }
+
+    .addressText {
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #101010;
+        font-size: 11.4px;
+        font-weight: lighter;
+        top: 267px;
+        left: 781px;
+        opacity: 0.44;
+        letter-spacing: -0.2;
+        width: 78px;
+        line-height: 1.5;
+    }
+
+    #phoneIcon {
+        position: absolute;
+        top: 489px;
+        left: 636px;
+        width: 255px;
+        color: #bbb;
+        font-size: 10px;
+        transform: rotate(90deg);
+    }
+
+    .phoneText {
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #101010;
+        font-size: 11.4px;
+        font-weight: lighter;
+        top: 363px;
+        left: 781px;
+        opacity: 0.44;
+        letter-spacing: -0.2;
+        line-height: 1.5;
+    }
+
+    #mailIcon {
+        position: absolute;
+        top: 386px;
+        left: 759px;
+        width: 255px;
+        color: #bbb;
+        font-size: 10px;
+    }
+
+    .mailText {
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #101010;
+        font-size: 11.4px;
+        font-weight: lighter;
+        top: 382px;
+        left: 781px;
+        opacity: 0.44;
+        letter-spacing: -0.2;
+        line-height: 1.5;
+    }
+
+    .mapContainer {
+        position: relative;
+        top: 300px;
+        height: 300px;
+    }
+
+    .newsLetterContainer {
+        position: relative;
+        background-color: #2E2E2E;
+        top: 300px;
+        height: 245px;
+    }
+
+    .newsLetterMainText {
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #ffffff;
+        font-size: 10.3px;
+        font-weight: lighter;
+        top: 18px;
+        left: 581px;
+        opacity: 0.8;
+        letter-spacing: -0.2;
+        line-height: 1.5;
+    }
+
+    .newsLetterSubText {
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #ffffff;
+        font-size: 10.3px;
+        font-weight: lighter;
+        top: 38px;
+        left: 568px;
+        opacity: 0.8;
+        letter-spacing: -0.2;
+        line-height: 1.5;
+    }
+
+    .mailInput {
+        position: relative;
+        color: #afacac;
+        width: 213px;
+        top: 78px;
+        left: 502px;
+        height: 34px;
+        border: 1px solid #696969;
+        margin: 3px;
+        padding: 8px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        line-height: 3px;
+        background-color: transparent;
+    }
+
+    .emailButton {
+        position: absolute;
+        top: 81px;
+        left: 718px;
+        background-color: #87898a;
+        border: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        font-weight: thin;
+        color: white;
+        height: 34px;
+        width: 39px;
+        opacity: 1;
+    }
+
+    #emailButtonIcon {
+        position: absolute;
+        top: 91px;
+        left: 729px;
+        font-size: 12px;
+        font-size: 15px;
+        font-weight: thin;
+        color: white;
+        height: 34px;
+        width: 39px;
+        opacity: 0.6;
+    }
+
+    #facebookIcon {
+        position: absolute;
+        top: 141px;
+        left: 519px;
+        font-size: 16px;
+        font-size: 26px;
+        font-weight: thin;
+        color: white;
+        height: 34px;
+        width: 39px;
+        opacity: 0.6;
+    }
+
+    #twitterIcon {
+        position: absolute;
+        top: 141px;
+        left: 557px;
+        font-size: 16px;
+        font-size: 27px;
+        font-weight: thin;
+        color: white;
+        height: 34px;
+        width: 39px;
+        opacity: 0.6;
+    }
+
+    #skypeIcon {
+        position: absolute;
+        top: 140px;
+        left: 604px;
+        font-size: 16px;
+        font-size: 30px;
+        font-weight: thin;
+        color: white;
+        height: 35px;
+        width: 39px;
+        opacity: 0.6;
+    }
+
+    #youtubeIcon {
+        position: absolute;
+        top: 140px;
+        left: 693px;
+        font-size: 16px;
+        font-size: 30px;
+        font-weight: thin;
+        color: white;
+        height: 35px;
+        width: 39px;
+        opacity: 0.6;
+    }
+
+    #dribbbleIcon {
+        position: absolute;
+        top: 140px;
+        left: 646px;
+        font-size: 16px;
+        font-size: 30px;
+        font-weight: thin;
+        color: white;
+        height: 35px;
+        width: 39px;
+        opacity: 0.6;
+    }
+
+    .copyRightText {
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #ffffff;
+        font-size: 9.3px;
+        font-weight: lighter;
+        top: 195px;
+        left: 587px;
+        opacity: 0.5;
+        letter-spacing: -0.2;
+        line-height: 1.5;
+    }
+
+    .copyrightIcon {
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #ffffff;
+        font-size: 9.3px;
+        font-weight: lighter;
+        top: 195px;
+        left: 629px;
+        opacity: 0.;
+        letter-spacing: -0.2;
+        line-height: 1.5;
+        height: 12;
+        width: 12;
+    }
+
+    .yearText {
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #ffffff;
+        font-size: 9.3px;
+        font-weight: lighter;
+        top: 195px;
+        left: 645px;
+        opacity: 0.5;
+        letter-spacing: -0.2;
+        line-height: 1.5;
+    }
+
+    .dollar {
+        font-size: 20px;
+        margin-bottom: 19px;
+    }
+
+    .day {
+        font-size: 12px;
+
+        /*line-height: 2;*/
+    }
+
+    .amount span:last-child {
+        display: block;
+        margin-top: 23px;
+        margin-bottom: 0px;
+    }
+    /* Next & previous buttons */
+
+    #prev,
+    #next {
+        cursor: pointer;
+        position: absolute;
+        top: 285px;
+        left: 30px;
+        border-radius: 0 3px 3px 0;
+        font-size: 15.5;
+        color: white;
+    }
+    /* Position the "next button" to the right */
+
+    #next {
+        right: 0;
+        left: 1241px;
+        /*border-radius: 3px 0 0 3px;*/
+    }
+    /* On hover, add a black background color with a little bit see-through */
+    /*#prev:hover, #next:hover {
+	  background-color: rgba(0,0,0,0.8);
+     }*/
+
+     .prevNextContainer:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .fa-chevron-left:hover,
+    .fa-chevron-right:hover {
+        color: #01A1DD;
+    }
+
+    .prevNextButton {
+        border: none;
+        background-color: transparent;
+    }
+    /*.overlay {
+	  position: absolute;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  transition: all .5s;
+	  overflow: hidden;
+	  height: 0;
+	  background: black;
+	  text-align: center;
+	  font-size: 50px;
+	  width: 254px;
+	  height:125px;
+	}
+	.img:hover .overlay,
+	.overlay:hover {
+	  height: 40%;
+	  background: black;
+	  color:#bbb;
+	  opacity: 0.5;
+	}
+	.img > img {
+	  display: block;
+     }*/
+
+     .overlay {
+        position: absolute;
+        top: 108px;
+        left: 10px;
+        transition: 1s all;
+        display: none
+    }
+</style>
+<style type="text/css">
+html,
+body,
+#map_canvas {
+    margin: 0;
+    padding: 0;
+    top: 100px;
+    height: 300px
+}
+</style>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+
+         $( ".img" ).hover(function() {
+            console.log("hover function called");
+         $(".overlay").fadeIn();
+        });
+         $( ".img" ).mouseout(function() {
+            console.log("hover out function called");
+         $(".overlay").fadeOut();
+        });
+    });
+
+   
+</script>
+<script>
+    function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+    //Wed Nov 19 2014
+    m = checkTime(m);
+    s = checkTime(s);
+    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    document.getElementById('time').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+    document.getElementById("date").innerHTML = weekday[today.getDay()] + " " + months[today.getMonth()] + " " + today.getDate() + " " + today.getFullYear();
+}
+
+function checkTime(i) {
+    if (i < 10) { i = "0" + i }; // add zero in front of numbers < 10
+    return i;
+}
+</script>
+
+<body onload="startTime()">
+    <div class="container">
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <img src="1.jpg" style="width:1280px;height:600px">
+            </div>
+            <div class="mySlides">
+                <img src="2.jpg" style="width:1280px;height:600px">
+            </div>
+            <div class="mySlides fade">
+                <img src="4.jpg" style="width:1280px;height:600px">
+            </div>
+        </div>
+        <br>
+        <ul class="list">
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#service">SERVICE</a></li>
+            <li><a href="#portfolio">PORTFOLIO</a></li>
+            <li><a href="#clients">CLIENTS</a></li>
+            <li><a href="#price">PRICE</a></li>
+            <li><a href="#contacts">CONTACTS</a></li>
+        </ul>
+        <div class="textContent">
+            TEMPLATE FOR YOUR COMPANY
+        </div>
+        <div class="textContent2">
+            WEB SITE FOR BUSINESS
+        </div>
+        <div class="prevNextContainer">
+            <button id="prev" onclick="plusSlides(-1)" class="prevNextButton"> <i class="fas fa-chevron-left"></i></button>
+            <button id="next" onclick="plusSlides(1)" class="prevNextButton"> <i class="fas fa-chevron-right"></i></a>
+            </div>
+        <!--<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>-->
+          <div class="textContent3" id="date">
+            <!--	Wed Nov 19 2014-->
+        </div>
+        <div class="time" id="time">
+        </div>
+        <button class="buttonClass" id="joinUsButton">JOIN US</button>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <div class="whiteCard">
+        </div>
+        <div class="blueCard">
+        </div>
+        <img src="triangle.png" class="triangle">
+        <div class="recentWorks">
+            <span class="mainText">RECENT WORKS</span>
+            <span class="subText1">Loreal ipsum dolor sit amet cosectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+            <span class="subText2">There are many variations of passages of Lorem losum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly beleivable.</span>
+            <span class="recentWorkRectangle"></span>
+            <i class="fas fa-angle-right" id="rightArrow"></i>
+            <i class="fas fa-angle-right" id="leftArrow"></i>
+        </div>
+        <div class="welcome">
+            <span class="welcomeMain">WELCOME TO OUR SITE!</span>
+            <img src="3.png" class="maleImage">
+            <span class="welcomeSubText">Lorem ipsum dolor sit amet cosectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehendent in voluptate veliit esse cillum dolore eu fugiat nulla pariatur.</span>
+            <button class="readMoreButton">READ MORE</button>
+        </div>
+        <div class="serviceContainer">
+            <span class="serviceMainText">SERVICE</span>
+            <span class="blueLine"></span>
+            <span class="keyFeaturesText">The Key Features of our Job</span>
+            <div class="support">
+                <img src="home.png" class="home">
+                <span class="supportText">SUPPORT</span>
+                <span class="supportSubText">Lorem ipsum is simply dummy text of the printing and typesetting industry.</span>
+            </div>
+            <div class="wellDocumented">
+                <img src="document.png" class="wellDocumentedImage">
+                <span class="wellDocumentedText">WELL DOCUMENTED</span>
+                <span class="wellDocumentedSubText">Lorem ipsum is simply dummy text of the printing and typesetting industry.</span>
+            </div>
+            <div class="designe">
+                <img src="clock.png" class="clock">
+                <span class="designeText">DESIGNE UI/UX</span>
+                <span class="designeSubText">Lorem ipsum is simply dummy text of the printing and typesetting industry.</span>
+            </div>
+            <div class="WebSecurity">
+                <img src="heart.png" class="heart">
+                <span class="webSecurityText">WEB SECURITY</span>
+                <span class="webSecuritySubText">Lorem ipsum is simply dummy text of the printing and typesetting industry.</span>
+            </div>
+        </div>
+        <div class="featuredWorksContainer">
+            <div class="featuresMainText">FEATURED PROJECTS</div>
+            <div class="featureBlueLine"></div>
+            <div class="featureText">Lorem ipsum dolor sit amet, cosectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+            <div class = "imagesContainer">
+                <div class = "imageClass">
+                    <img src="4.jpg" style = "max-width: 100%;" class = "img">
+                    <div class="overlay">
+                       <div class="blackStrip">
+                           <div class="wallStreetText">WALL STREET</div><br/>
+                           <div class="wallStreetSubText">Lorem ipsum is simply dummy text of the printing and typesetting industry.</div>
+                       </div>
+                    </div>
+                </div>
+                <div class = "imageClass">
+                    <img src="4.jpg" style = "max-width: 100%;" class = "img">
+                    <div class="overlay">
+                       <div class="blackStrip">
+                           <div class="wallStreetText">WALL STREET</div><br/>
+                           <div class="wallStreetSubText">Lorem ipsum is simply dummy text of the printing and typesetting industry.</div>
+                       </div>
+                   </div>
+                </div>
+                <div class = "imageClass">
+                    <img src="4.jpg" style = "max-width: 100%;" class = "img">
+                    <div class="overlay">
+                       <div class="blackStrip">
+                           <div class="wallStreetText">WALL STREET</div><br/>
+                           <div class="wallStreetSubText">Lorem ipsum is simply dummy text of the printing and typesetting industry.</div>
+                       </div>
+                   </div>
+                </div>
+                <div class = "imageClass">
+                    <img src="4.jpg" style = "max-width: 100%;" class = "img">
+                    <div class="overlay">
+                       <div class="blackStrip">
+                           <div class="wallStreetText">WALL STREET</div><br/>
+                           <div class="wallStreetSubText">Lorem ipsum is simply dummy text of the printing and typesetting industry.</div>
+                       </div>
+                   </div>
+                </div>
+                <div class = "imageClass">
+                    <img src="4.jpg" style = "max-width: 100%;" class = "img">
+                    <div class="overlay">
+                       <div class="blackStrip">
+                           <div class="wallStreetText">WALL STREET</div><br/>
+                           <div class="wallStreetSubText">Lorem ipsum is simply dummy text of the printing and typesetting industry.</div>
+                       </div>
+                   </div>
+                </div>
+                <div class = "imageClass">
+                    <img src="4.jpg" style = "max-width: 100%;" class = "img">
+                    <div class="overlay">
+                       <div class="blackStrip">
+                           <div class="wallStreetText">WALL STREET</div><br/>
+                           <div class="wallStreetSubText">Lorem ipsum is simply dummy text of the printing and typesetting industry.</div>
+                       </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+            <!--<span class = "blackStrip"></span>
+			<span class = "wallStreetText">WALL STREET</span>
+			<span class = "wallStreetSubText">Lorem ipsum is simply dummy text of the printing and typesetting industry.</span>-->
+        </div>
+        <div class="whatPeopleSayContainer">
+            <img src="9.jpg" class="blueMountain">
+            <span class="whatPeopleSayMainText">WHAT PEOPLE SAY</span>
+            <span class="whiteLine"></span>
+            <img src="3.png" class="maleImage1">
+            <span class="kattyFlower">KATTY FLOWER</span>
+            <span class="whatPeopleSaySubText">Lorem ipsum dolor sit amet, cosectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span>
+            <i class="fas fa-quote-right" id="rightQuote"></i>
+            <i class="fas fa-quote-right" id="leftQuote"></i>
+            <span class="peopleRectangle"></span>
+            <i class="fas fa-angle-right" id="peopleRightArrow"></i>
+            <i class="fas fa-angle-right" id="peopleLeftArrow"></i>
+        </div>
+        <div class="priceContainer">
+            <div class="priceChildContainer">
+                <img src="1.jpg" class="main">
+            </div>
+            <span class="priceMainText">PRICE</span>
+            <span class="priceBlueLine"></span>
+            <span class="priceDescription">Our price for your company</span>
+            <table class="table1">
+                <tr style="height:25px">
+                    <td>SILVER</td>
+                </tr>
+                <tr>
+                    <td class="amount">
+                        <span class="dollar">$ </span>24,35
+                        <span class="day">MON</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="noBonusPoints">No Bonus Points</td>
+                </tr>
+                <tr>
+                    <td class="noBonusPoints">No Bonus Points</td>
+                </tr>
+                <tr>
+                    <td class="noBonusPoints">No Bonus Points</td>
+                </tr>
+                <tr>
+                    <td class="noBonusPoints">No Bonus Points</td>
+                </tr>
+                <tr>
+                    <td class="signUp">SIGN UP</td>
+                </tr>
+            </table>
+            <table class="table2">
+                <tr style="height:25px">
+                    <td>GOLD</td>
+                </tr>
+                <tr>
+                    <td class="amount" style="background-color: #01A1DD; color:white;opacity:0.7;">
+                        <span class="dollar">$ </span>50,00
+                        <span class="day">MON</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="noBonusPoints" ">Free Trials</td>
+                </tr>
+                <tr>
+                   <td class = "noBonusPoints ">Free Trials</td>
+               </tr>
+               <tr>
+                   <td class = "noBonusPoints ">Free Trials</td>
+               </tr>
+               <tr>
+                   <td class = "noBonusPoints ">Free Trials</td>
+               </tr>
+               <tr>
+                   <td class = "signUp " style = "background-color: #01A1DD; color:white; ">SIGN UP</td>
+               </tr>
+           </table>
+
+           <table class = "table3 ">
+            <tr style = "height:25px ">
+               <td>DIAMOND</td>
+           </tr>
+           <tr>
+               <td class = "amount ">
+                  <span class = "dollar ">$ </span>123,12
+                  <span class = "day ">MON</span>
+              </td>
+          </tr>
+          <tr>
+           <td class = "noBonusPoints ">All Bonus Points</td>
+
+       </tr>
+       <tr>
+           <td class = "noBonusPoints ">All Bonus Points</td>
+       </tr>
+       <tr>
+           <td class = "noBonusPoints ">All Bonus Points</td>
+       </tr>
+       <tr>
+           <td class = "noBonusPoints ">All Bonus Points</td>
+       </tr>
+       <tr>
+           <td class = "signUp ">SIGN UP</td>
+       </tr>
+   </table>
+</div>
+<div class = "contactsContainer ">
+ <span class = "contactsMainText ">OUR CONTACTS</span>
+ <span class = "contactsBlueLine "></span>
+ <span class = "contactsDescription ">Our price for your company</span>
+ <div class = "inputContainer ">
+    <input type="text " id="lname " name="lastname " placeholder="Your Name... " class = "input "><br/>
+    <input type="text " id="lname " name="lastname " placeholder="Your Email... " class = "input "><br/>
+    <input type="text " id="lname " name="lastname " placeholder="Your Phone Number... " class = "input "><br/>
+    <textarea  placeholder="Messages... " class = "textArea "></textarea>
+    <button class = "contactSendButton " >SEND</button>
+</div>
+<div class = "contactUsContainer ">
+    <span class = "contactUsText ">CONTACT US</span>
+    <span class = "contactUsBlueLine "></span>
+    <i class="fas fa-pencil-alt " id = "editIcon "></i>
+    <span class = "addressText ">Pheonix Inc. PO Box 345678 Little Lonsdale St, Melbourne Australia</span>
+    <i class="fas fa-phone " id = "phoneIcon "></i>
+    <span class = "phoneText ">Phone:(415) 124-5678</span>
+    <i class="fas fa-envelope " id = "mailIcon "></i>
+    <span class = "mailText ">website@yourname.com</span>
+</div>
+</div>
+<div id="googleMap " class =  "mapContainer " style="width:100%;height:275px; ">
+</div>
+<div class = "newsLetterContainer ">
+ <span class = "newsLetterMainText ">NEWSLETTER SIGNUP</span>
+ <span class = "newsLetterSubText ">Get Cool Stuff! We hate spam! </span>
+ <input type="text " placeholder="Enter your Email... " class = "mailInput "><br/>
+ <button class = "emailButton "></button>
+ <i class="fas fa-location-arrow " id = "emailButtonIcon "></i>
+ <i class="fab fa-facebook-f " id = "facebookIcon "></i>
+ <i class="fab fa-twitter " id = "twitterIcon "></i>
+ <i class="fab fa-skype " id = "skypeIcon "></i>
+ <i class="fab fa-dribbble " id = "dribbbleIcon "></i>
+ <i class="fab fa-youtube " id = "youtubeIcon "></i>
+ <span class = "copyrightText ">Copyright</span>
+ <svg xmlns="http://www.w3.org/2000/svg " viewBox="0 0 512 512 " class = "copyrightIcon " style = "fill:#ffffff;opacity:0.5; "><path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 448c-110.532 0-200-89.451-200-200 0-110.531 89.451-200 200-200 110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200zm107.351-101.064c-9.614 9.712-45.53 41.396-104.065 41.396-82.43 0-140.484-61.425-140.484-141.567 0-79.152 60.275-139.401 139.762-139.401 55.531 0 88.738 26.62 97.593 34.779a11.965 11.965 0 0 1 1.936 15.322l-18.155 28.113c-3.841 5.95-11.966 7.282-17.499 2.921-8.595-6.776-31.814-22.538-61.708-22.538-48.303 0-77.916 35.33-77.916 80.082 0 41.589 26.888 83.692 78.277 83.692 32.657 0 56.843-19.039 65.726-27.225 5.27-4.857 13.596-4.039 17.82 1.738l19.865 27.17a11.947 11.947 0 0 1-1.152 15.518z "/></svg>
+ <!--<img src = "copyright.svg " class = "copyrightIcon ">-->
+ <span class = "yearText ">2014-2015</span>
+</div>
+</div>
+<script>
+	function myMap() {
+		var grayStyles = [
+        {
+          featureType: "all ",
+          stylers: [
+          { saturation: -90 },
+          { lightness: 50 }
+          ]
+      },
+      ];
+      var mapProp = {
+        center: new google.maps.LatLng(41.325663, 19.8029607),
+        zoom: 15,
+        styles: grayStyles,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map=new google.maps.Map(document.getElementById("googleMap "),mapProp);
+}
+
+
+</script>
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    console.log("ReachedPlusSlides function ");
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    console.log("Reached currentSlide function ");
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    console.log("Reached showSlides function ");
+    var i;
+    var slides = document.getElementsByClassName("mySlides ");
+    var dots = document.getElementsByClassName("dot ");
+    if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none ";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active ", " ");
+            }
+            slides[slideIndex-1].style.display = "block ";
+            dots[slideIndex-1].className += " active ";
+        }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVbE2bRFCJFTlUyk8QLR2xDDhMfNKlxOM&callback=myMap "></script>
+</body>
+</html>
